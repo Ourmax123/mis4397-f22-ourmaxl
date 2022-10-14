@@ -1,0 +1,5 @@
+<%= search_form_for @q do |f| %>
+<%= f.label :first_name %>
+<%= f.search_field :first_name_cont, placeholder: "Search..." %>
+<%= f.submit "Search!" %>
+<% end %>
