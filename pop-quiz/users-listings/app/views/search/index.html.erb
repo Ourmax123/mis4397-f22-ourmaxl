@@ -1,5 +1,12 @@
 <p id="notice"><%= notice %></p>
 
+
+<%= form_with url: "/search", method: :get do |form| %>
+  <%= form.label :query, "Search for:" %>
+  <%= form.text_field :query %>
+  <%= form.submit "Search" %>
+<% end %>
+
 <h1> "Results" </h1>
 <%= render 'search/form' %>
 <table>
