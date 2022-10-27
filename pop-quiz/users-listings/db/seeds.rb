@@ -19,7 +19,7 @@
  # 2.User.last
  # 3.User.limit(10)
  # 4.User.limit(100)
- # 5.User.order(:lastname).limit(100)
+ # 5.User.order(:last_name).limit(100)
  # 6.User.order(:email).limit(200)
  # 7.User.where("email like ?", "%yahoo%").destroy_all
  # 8.User.where("last_name like ?", "d%").destroy.all

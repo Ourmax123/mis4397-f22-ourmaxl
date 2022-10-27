@@ -1,0 +1,10 @@
+what is a json object and how to create?
+JSON stands for JavaScript Object Notation and it is a text based format for structured data.  It is used to transmit data on web applications.  You can create one on most text editors by typing out data variables and defining them within arrays.
+
+what is a csv file and how to create?
+CSV stands for comma seperated values and is a file type that allows data to be saved in a structured table. Most commonly created through excel but can be created through any text editor.  data must be seperated by commas.
+
+
+
+what are the steps in order to find an answer to something we don't know about?
+go to google and enter the infomration that you do know about what you want to find.  For example we would look up "Ubuntu 18.04 Rails Heroku Getting Started" to find information on how to set up a heroku server on our cloud 9 instance.  You'd specify versions of apps you use, any specific languages and other relevent info.
