@@ -1,10 +1,117 @@
-<div class="container">
-  <h1>Chatter</h1>
-  <h4>A CableReady &amp; StimulusReflex demo</h4>
-  
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Twitter Clone</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    
+    <link 
+          rel="stylesheet" 
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+          integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+<%= stylesheet_link_tag "style.css" %>
+  </head>
+  <body>
+      <!-- sidebar starts -->
+      <div class="sidebar">
+      <img src="images/logo.jpeg" alt="Logo", class="logo">
+      <div class="sidebarOption active">
+<span class="material-symbols-outlined"> home
+</span>        <h2>Home</h2>
+      </div>
+
+      <div class="sidebarOption">
+        <span class="material-symbols-outlined"> search
+        </span>
+        <h2>Explore</h2>
+      </div>
+
+      <div class="sidebarOption">
+<span class="material-symbols-outlined"> notifications
+</span>
+<h2>Notifications</h2>
+      </div>
+
+      <div class="sidebarOption">
+<span class="material-symbols-outlined"> mail
+</span>        
+<h2>Messages</h2>
+      </div>
+
+      <div class="sidebarOption">
+<span class="material-symbols-outlined"> bookmark
+</span>
+<h2>Bookmarks</h2>
+      </div>
+
+      <div class="sidebarOption">
+<span class="material-symbols-outlined"> list_alt
+</span>
+<h2>Lists</h2>
+      </div>
+
+      <div class="sidebarOption">
+<span class="material-symbols-outlined"> person
+</span>
+<h2>Profile</h2>
+      </div>
+
+      <div class="sidebarOption">
+<span class="material-symbols-outlined"> more_horiz
+</span>
+<h2>More</h2>
+      </div>
+      <button class="sidebar__tweet">Tweet</button>
+    </div>
+     <!-- sidebar ends -->
+     
+     <!-- feed starts -->
+     
+    <div class="container">
+
+
   <%= render "form" %>
-  
+
   <div id="timeline">
     <%= render partial: "post", collection: @posts %>
   </div>
 </div>
+     
+     
+     <!-- feed ends -->
+
+     
+     
+     <!-- widgets starts -->
+     
+     <div>
+     <div class="widgets">
+     <div class="widgets__input">
+       <span class="material-symbols-outlined"> search
+       </span>        
+       <input type="text" placeholder="Search Twitter">
+      </div>
+
+       <div class="widgets__widgetContainer">
+        <h2>What's happening?</h2>
+        <div class="twitter-tweet twitter-tweet-rendered" style="display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;"><iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 250px; height: 401px; display: block; flex-grow: 1;" title="Twitter Tweet" src="https://platform.twitter.com/embed/Tweet.html?dnt=false&amp;embedId=twitter-widget-0&amp;features=eyJ0ZndfdGltZWxpbmVfbGlzdCI6eyJidWNrZXQiOlsibGlua3RyLmVlIiwidHIuZWUiLCJ0ZXJyYS5jb20uYnIiLCJ3d3cubGlua3RyLmVlIiwid3d3LnRyLmVlIiwid3d3LnRlcnJhLmNvbS5iciJdLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2hvcml6b25fdGltZWxpbmVfMTIwMzQiOnsiYnVja2V0IjoidHJlYXRtZW50IiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9lZGl0X2JhY2tlbmQiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3JlZnNyY19zZXNzaW9uIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19jaGluX3BpbGxzXzE0NzQxIjp7ImJ1Y2tldCI6ImNvbG9yX2ljb25zIiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9yZXN1bHRfbWlncmF0aW9uXzEzOTc5Ijp7ImJ1Y2tldCI6InR3ZWV0X3Jlc3VsdCIsInZlcnNpb24iOm51bGx9LCJ0Zndfc2Vuc2l0aXZlX21lZGlhX2ludGVyc3RpdGlhbF8xMzk2MyI6eyJidWNrZXQiOiJpbnRlcnN0aXRpYWwiLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2V4cGVyaW1lbnRzX2Nvb2tpZV9leHBpcmF0aW9uIjp7ImJ1Y2tldCI6MTIwOTYwMCwidmVyc2lvbiI6bnVsbH0sInRmd19kdXBsaWNhdGVfc2NyaWJlc190b19zZXR0aW5ncyI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfdmlkZW9faGxzX2R5bmFtaWNfbWFuaWZlc3RzXzE1MDgyIjp7ImJ1Y2tldCI6InRydWVfYml0cmF0ZSIsInZlcnNpb24iOm51bGx9LCJ0Zndfc2hvd19ibHVlX3ZlcmlmaWVkX2JhZGdlIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9lZGl0X2Zyb250ZW5kIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH19&amp;frame=false&amp;hideCard=false&amp;hideThread=false&amp;id=463440424141459456&amp;lang=en&amp;origin=https%3A%2F%2Fsomanath-goudar.github.io%2Fhtml-css-projects%2Ftwitter-clone%2F&amp;sessionId=2249c103d2a0a470ab61afb43435bc472940d581&amp;theme=light&amp;widgetsVersion=a3525f077c700%3A1667415560940&amp;width=550px" data-tweet-id="463440424141459456"></iframe>
+        </div>
+        <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+       </div>
+     </div>
+     
+     </div>
+     <!-- widgets ends -->
+  </body>
+
+
+  
+
+  
+</div>
+
+</html>

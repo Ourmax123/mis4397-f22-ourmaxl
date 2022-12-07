@@ -1,13 +1,13 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
+  config.hosts << "2718ad2e26204b16b7cd3e7b6f8c4392.vfs.cloud9.us-east-2.amazonaws.com"
   config.session_store :cache_store
-  config.hosts << "df4da28f05ab4abb9fa336e0236f3713.vfs.cloud9.us-east-1.amazonaws.com"
   config.hosts << "44.212.167.28"
   config.action_dispatch.default_headers = {
     'X-Frame-Options' => 'ALLOWALL'
   }
-  config.web_console.permissions = '162.236.159.148'
+  # config.web_console.permissions = ''
 
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -81,4 +81,8 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+  
+  
+    
+  
 end
