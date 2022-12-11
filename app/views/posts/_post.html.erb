@@ -11,5 +11,8 @@
     <%= link_to "#", class: "card-link", data: { reflex: "click->PostsReflex#like", id: post.id } do %>
       Like (<%= tag.span post.likes_count, id: "post-#{post.id}-likes" %>)
     <% end %>
+     <%= link_to "#", class: "card-link", data: { reflex: "click->PostsReflex#delete", id: post.id } do %>
+      Delete 
+    <% end %>
   </div>
 </div>

@@ -22,4 +22,11 @@ class PostsReflex < ApplicationReflex
     )
     cable_ready.broadcast
   end
+  
+  def delete
+    post = Post.find(element.dataset[:id])
+    post.destroy!
+    
+    cable_ready.broadcast
+  end
 end

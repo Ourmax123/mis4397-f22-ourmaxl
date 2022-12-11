@@ -544,7 +544,16 @@ span {
     margin-right: 15px;
 }
 
-a:link { text-decoration: none; }
+a:link { text-decoration: none; /* unvisited link */
+         user-select: none;}
 
+a:visited {text-decoration: none;
+           user-select: none;}   /* visited link */
 
+a:hover {text-decoration: none;
+         user-select: none;
+         background-color: transparent;
+}     /* mouse over link */
 
+a:active {text-decoration: none;;
+          user-select: none;}    /* selected link */
