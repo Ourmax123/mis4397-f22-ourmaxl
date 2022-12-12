@@ -7,6 +7,7 @@ Rails.application.configure do
   config.action_dispatch.default_headers = {
     'X-Frame-Options' => 'ALLOWALL'
   }
+  config.hosts << "df4da28f05ab4abb9fa336e0236f3713.vfs.cloud9.us-east-1.amazonaws.com"
   # config.web_console.permissions = ''
 
   # Settings specified here will take precedence over those in config/application.rb.

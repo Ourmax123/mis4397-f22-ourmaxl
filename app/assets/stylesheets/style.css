@@ -294,7 +294,7 @@ a,
 li {
     text-decoration: none;
     list-style: none;
-    color: white;
+    /*color: white;*/
 }
 
 li:hover {
