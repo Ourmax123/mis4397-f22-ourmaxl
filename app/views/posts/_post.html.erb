@@ -14,5 +14,6 @@
      <%= link_to "#", class: "card-link", data: { reflex: "click->PostsReflex#delete", id: post.id } do %>
       Delete 
     <% end %>
+   <%= link_to "Bookmark", bookmark_update_path(post: @post) %>
   </div>
 </div>

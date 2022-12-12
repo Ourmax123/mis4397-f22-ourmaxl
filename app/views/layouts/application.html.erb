@@ -75,17 +75,34 @@
       </div>
     </a>
 
-      <div class="sidebarOption">
-<span class="material-symbols-outlined"> more_horiz
-</span>
-<h2>More</h2>
-      </div>
+<div class="dropdown">
+  <div class="sidebarOption">
+  <div class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+    <span class="material-symbols-outlined"> more_horiz
+    </span>
+    <h2>More</h2>
+    </div>
+</div>
+      
+      
      <a href="posts#index">
       <button class="sidebar__tweet">Tweet</button>
       </a>
     </div>
+    
+  
      <!-- sidebar ends -->
     
+    <% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
     <%= yield %>
   </body>
 </html>

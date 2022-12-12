@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'bookmark/update'
+  devise_for :users
   get 'explore/index'
   get 'profile/index'
   resources :posts, only: [:index, :create]

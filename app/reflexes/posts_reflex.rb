@@ -26,7 +26,11 @@ class PostsReflex < ApplicationReflex
   def delete
     post = Post.find(element.dataset[:id])
     post.destroy!
-    
     cable_ready.broadcast
+  end
+  
+  def bookmark
+    post = Post.find(element.dataset[:id])
+    post.bookmark!
   end
 end
