@@ -1,11 +1,19 @@
 <div class="card mb-2">
   <div class="card-body">
     <h5 class="card-title text-muted">
-     
+      <img alt="profile pic" id="feedpic"<%= image_tag(post.user.avatar_thumbnail)%>
       <%= post.user.username unless post.user.blank? %>
       <small>- <%= time_ago_in_words post.created_at %> ago</small>
     </h5>
     <div class="card-text lead mb-2"><%= post.body %></div>
+   <% if %>
+    <% post.image.attached? %>
+   <% then %>
+    <section class="post">
+      <%= image_tag post.image, class: 'main-image' %>
+    </section>
+   <% end %>
+    
     <%= link_to "#", class: "card-link", data: { reflex: "click->PostsReflex#repost", id: post.id } do %>
       Repost (<%= tag.span post.reposts_count, id: "post-#{post.id}-reposts" %>)
     <% end %>
