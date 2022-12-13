@@ -58,6 +58,12 @@
       <h2>Lists</h2>
     </div>
     <% if user_signed_in? %>
+    <a href="profile#index">
+      <div class="sidebarOption">
+        <span class="material-symbols-outlined"> person </span>
+        <h2>Profile</h2>
+      </div>
+    </a>
     <a href="<%= destroy_user_session_path %>" data-method="delete">
       <div class="sidebarOption">
         <span class="material-symbols-outlined"> person </span>

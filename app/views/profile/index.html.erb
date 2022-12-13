@@ -32,8 +32,11 @@
             <section class="twitterprofile">
                 <div class="headerprofileimage">
                     <img src="https://res.cloudinary.com/dowrygm9b/image/upload/v1570267399/laptop-3174729_yiprzu.jpg" alt="header" id="headerimage">
-                    <img src="https://res.cloudinary.com/dowrygm9b/image/upload/v1570267399/laptop-3174729_yiprzu.jpg" alt="profile pic" id="profilepic">
-                    <div class="editprofile">Edit Profile</div>
+                    <img alt="profile pic" id="profilepic"<%= image_tag(current_user.avatar_thumbnail)%>
+                    <p>
+
+                    <div class="editprofile"> <%= link_to "Edit Profile", edit_user_registration_path %> </div>
+                    </p>  
                 </div>
                 <div class="bio">
                     <div class="handle">
