@@ -1,6 +1,7 @@
 <%= form_with model: @post, local: true, html: { class: "my-4" } do |form| %>
   
-  
+    <% if user_signed_in? %>
+    <% then %>
   <div class="form-group">
     <%= form.text_area :body, placeholder: "Enter your message", class: "form-control", rows: 3 %>
     <div class="actions">
@@ -14,4 +15,5 @@
 
     </div>
   </div>
+  <% end %>
 <% end %>

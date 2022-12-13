@@ -6,23 +6,30 @@
       <small>- <%= time_ago_in_words post.created_at %> ago</small>
     </h5>
     <div class="card-text lead mb-2"><%= post.body %></div>
-   <% if %>
-    <% post.image.attached? %>
-   <% then %>
-    <section class="post">
-      <%= image_tag post.image, class: 'main-image' %>
-    </section>
-   <% end %>
+     <% if %>
+      <% post.image.attached? %>
+     <% then %>
+      <section class="post">
+        <%= image_tag post.image, class: 'main-image' %>
+      </section>
+     <% end %>
     
     <%= link_to "#", class: "card-link", data: { reflex: "click->PostsReflex#repost", id: post.id } do %>
-      Repost (<%= tag.span post.reposts_count, id: "post-#{post.id}-reposts" %>)
+     <span class="material-symbols-outlined">
+       sync
+     </span> (<%= tag.span post.reposts_count, id: "post-#{post.id}-reposts" %>)
     <% end %>
     <%= link_to "#", class: "card-link", data: { reflex: "click->PostsReflex#like", id: post.id } do %>
-      Like (<%= tag.span post.likes_count, id: "post-#{post.id}-likes" %>)
+    <span class="material-symbols-outlined">
+      Favorite
+    </span>
+    (<%= tag.span post.likes_count, id: "post-#{post.id}-likes" %>)
     <% end %>
      <%= link_to "#", class: "card-link", data: { reflex: "click->PostsReflex#delete", id: post.id } do %>
-      Delete 
+      <span class="material-symbols-outlined">
+        delete
+      </span> 
     <% end %>
-   <%= link_to "Bookmark", bookmark_update_path(post: @post) %>
+    
   </div>
 </div>
