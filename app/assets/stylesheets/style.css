@@ -392,6 +392,13 @@ span {
     left: 20px;
     border: 4px solid rgb(21, 32, 43);
 }
+#feedpic {
+    border-radius: 50%;
+    width: 35px;
+  height:35px
+    position: absolute;
+    border: 4px solid rgb(21, 32, 43);
+}
 
 .editprofile {
     margin-top: 5px;
@@ -604,3 +611,6 @@ a:hover {text-decoration: none;
 
 a:active {text-decoration: none;;
           user-select: none;}    /* selected link */
+          
+          
+          

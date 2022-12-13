@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   get 'explore/index'
   get 'profile/index'
-  resources :posts, only: [:index, :create]
+  resources :posts, only: [:index, :new, :create]
   resources :profile, only: [:index]
   resources :explore, only: [:index]
   root "posts#index"
