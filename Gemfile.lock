@@ -90,6 +90,8 @@ GEM
       responders
       warden (~> 1.2.3)
     erubi (1.11.0)
+    faker (3.0.0)
+      i18n (>= 1.8.11, < 2)
     ffi (1.15.5)
     globalid (1.0.0)
       activesupport (>= 5.0)
@@ -246,6 +248,7 @@ DEPENDENCIES
   cable_ready (~> 4.5)
   capybara (>= 3.26)
   devise
+  faker
   image_processing (~> 1.2)
   jbuilder (~> 2.7)
   listen (~> 3.3)

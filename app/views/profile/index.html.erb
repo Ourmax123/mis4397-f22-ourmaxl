@@ -25,7 +25,7 @@
                 <i class="fa fa-arrow-left" id="fa-arrow-left"></i>
                 </a>
                 <div>
-                    <h3>Soy Segun</h2>
+                    <h3><%= current_user.username unless current_user.blank? %></h2>
                         <span>38.7k Tweets</span>
                 </div>
             </section>
@@ -40,8 +40,8 @@
                 </div>
                 <div class="bio">
                     <div class="handle">
-                        <h3>Soy Segun</h3>
-                        <span>@segun_OS</span>
+                        <h3><%= current_user.username unless current_user.blank? %></h3>
+                        <span>@<%= current_user.username unless current_user.blank? %></span>
                     </div>
                     <p>Business Administration Student |</p>
                     <p>Front-end web developer |</p>
@@ -52,8 +52,8 @@
                             class="fa fa-birthday-cake" aria-hidden="true"></i> Born November 10</span>
                     <br> <span><i class="fa fa-calendar"></i> Joined May 2013</span>
                     <div class="nawa">
-                        <div class="followers"> 421 <span>Following</span></div>
-                        <div>1519<span> Followers</span></div>
+                        <div class="followers"> <% current_user.followed %> <span>Following</span></div>
+                        <div><% current_user.followers %><span> Followers</span></div>
                     </div>
                 </div>
             </section>
@@ -67,8 +67,11 @@
                 </div>
             </section>
             <section class="mytweets">
-               
-        </div>
+                   <div id="timeline">
+                     <%= render partial: "shared/post", collection: @posts %>
+                   </div>
+            </section>
+</div>
 
         <!-- RIGHT CONTAINER -->
 
